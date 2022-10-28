@@ -1,6 +1,8 @@
 import './App.css';
+import { Button } from './components/Button';
 import { Greet } from './components/Greet';
 import { Heading } from './components/Heading';
+import { Input } from './components/Input';
 import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
@@ -14,28 +16,27 @@ function App() {
 
   const nameList = [
     {
-      first: "Hirakata",
-      last: "Kenta"
+      first: "jgseirjgsiogjr",
+      last: "gesirjgi"
     },
     {
-      first: "Hirakata",
-      last: "Misato"
+      first: "Hkgopgk@sr",
+      last: "Mgeporgs"
     },
     {
-      first: "Horie",
-      last: "Popo"
+      first: "Hgojape",
+      last: "P@okewpoeawoo"
     },
   ]
 
 
   return (
     <div className="App">
-      <Status status="success" />
-      <Heading>Placeholder text</Heading>
-      <Oscar>
-        <Heading>Oscar goes to Leonardo Dicaprio!</Heading>
-      </Oscar>
-      <Greet name='Kenta' isLoggedIn={true}></Greet>
+      <Button handleClick={(event, id) => {
+        console.log("Button clicked!", event, id)
+      }} />
+      
+      <Input value='' handleChange={(event) => console.log(event)}></Input>
     </div>
   );
 }
